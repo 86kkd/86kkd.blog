@@ -10,6 +10,11 @@ const navConfig: DefaultTheme.NavItem[] = [
         text: "🌱 新手上路",
         items: [
           { text: "💾 基础安装", link: "/guide/rookie/pre-install" },
+          { text: "arch_tips",link:"/guide/prepare/arch_tips"},
+          { text: "build_blog",link:"/guide/prepare/build_blog"},
+          { text: "git", link:"/guide/prepare/git"},
+          { text: "langchain",link:"langchain"},
+          { text: "network",link:"network"},
           {
             text: "🔩 进阶安装",
             link: "/guide/rookie/desktop-env-and-app"
