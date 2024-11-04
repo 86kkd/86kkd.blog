@@ -1,6 +1,6 @@
 import { DefaultTheme } from "vitepress";
 
-const sidebarConfig:DefaultTheme.Sidebar = {
+const sidebarConfig: DefaultTheme.Sidebar = {
   "/guide/": [
     {
       text: "🎐 千里之行",
@@ -31,7 +31,13 @@ const sidebarConfig:DefaultTheme.Sidebar = {
             {
               text: "基础安装详解",
               link: "/guide/rookie/basic-install-detail"
-            }
+            },
+            { text: "arch_tips", link: "/guide/prepare/arch_tips" },
+            { text: "build_blog", link: "/guide/prepare/build_blog" },
+            { text: "git", link: "/guide/prepare/git" },
+            { text: "langchain", link: "langchain" },
+            { text: "network", link: "network" },
+
           ]
         },
         {
