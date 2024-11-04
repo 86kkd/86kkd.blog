@@ -25,6 +25,6 @@ export const KEYWORDS = keywords.join(",");
 export const META_TITLE = `${TITLE} —— 86kkd的技术博客`;
 
 // Algolia Search
-// export const API_KEY = "a8013e96ce5afc3bdea9699964e600b6";
-// export const APP_ID = "PATI20OZQ0";
-// export const INDEX_NAME = "arch-icekylin";
+export const API_KEY = "a8013e96ce5afc3bdea9699964e600b6";
+export const APP_ID = "PATI20OZQ0";
+export const INDEX_NAME = "arch-icekylin";
