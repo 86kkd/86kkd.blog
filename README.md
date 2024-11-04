@@ -75,4 +75,4 @@ docker compose up -d
 
 ## Star 历史
 
-[![Star History](https://starchart.cc/nakanomikuorg/arch-guide.svg)](https://starchart.cc/nakanomikuorg/arch-guide)
+[![Star History](https://starchart.cc/86kkd/86kkd.blog.svg)](https://starchart.cc/86kkd/86kkd.blog)

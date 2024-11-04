@@ -18,7 +18,7 @@ hero:
 
 features:
   - icon: 📖
-    title: 格式优化
+    title: 论文随笔
     details: VitePress 驱动，格式优化
     link: https://github.com/86kkd/86kkd.blog
   - icon: 📚
