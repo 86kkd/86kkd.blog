@@ -35,8 +35,8 @@ const sidebarConfig: DefaultTheme.Sidebar = {
             { text: "arch_tips", link: "/guide/prepare/arch_tips" },
             { text: "build_blog", link: "/guide/prepare/build_blog" },
             { text: "git", link: "/guide/prepare/git" },
-            { text: "langchain", link: "langchain" },
-            { text: "network", link: "network" },
+            { text: "langchain", link: "/guide/prepare/langchain" },
+            { text: "network", link: "/guide/prepare/network" },
 
           ]
         },
