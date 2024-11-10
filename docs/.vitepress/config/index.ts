@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import themeConfig from "./theme";
 import head from "./head";
+import { markdown } from './markdown'
 import { DESCRIPTION as description, LANG as lang, TITLE as title } from "./info";
 
 // noinspection JSUnusedGlobalSymbols
@@ -11,7 +12,7 @@ export default defineConfig({
   lang,
   lastUpdated: true,
   markdown: {
-    lineNumbers: true
+    ...markdown // 合并自定义的 markdown 配置
   },
   themeConfig,
   title

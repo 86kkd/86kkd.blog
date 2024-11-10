@@ -3,6 +3,7 @@
   "description": "This guide contains everything you may need from archlinux installation, graphics driver, daily software configuration, multimedia production, programming, etc.",
   "devDependencies": {
     "husky": "^8.0.3",
+    "markdown-it-mathjax3": "^4.3.2",
     "prettier": "^2.8.8",
     "vitepress": "^1.0.2",
     "vue": "^3.4.21"
