@@ -1,3 +1,11 @@
+# Neovim Configuration
+
+## The most important things
+install nvim-treesitter-cli in mason(for astro neovim)
+```vim
+:MasonInstall tree-sitter-cli
+```
+
 set number
 ```vim
 :set number
