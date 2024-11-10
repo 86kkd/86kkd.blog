@@ -1,6 +1,8 @@
 # Direct Preference Optimization (DPO)
 ## 什么是DPO
-将 RLHF 的 2 阶段多个模型的训练简化为了 1 阶段的 SFT 训练。
+DPO是一种用于大语言模型（LLM）对齐的新方法，它的主要目的是让AI模型的输出更好地符合人类偏好。
+它是RLHF（基于人类反馈的强化学习）的一种替代方案,该方法于2023年提出，
+显著简化了语言模型与人类偏好的对齐过程
 
 ## 在DPO之前提出之前
 
@@ -70,7 +72,7 @@ $$
 >`The key point is` 我们不需要再面对公式中
 > $\mathbb{E}_{y \sim \pi_{\theta}(y|x)}$
 > sample操作，这样我们可以进行梯度下降backprop
-> 同时我们将loss转换成了$\pi_\theta(y|x)$和$\pi^*(y|x)$的KL散度。这非常的amazing啊！！
+> 同时我们将loss转换成了$\pi_\theta(y|x)$和$\pi^*(y|x)$的KL散度。这非常的amazing啊！
 > 我们目前只需要最小化新的概率分布$\pi^x(y|x)$和$\pi_\theta(y|x)$
 > 就完成了之前的复杂的RL算法
 
@@ -103,7 +105,15 @@ $$
 \max_{\pi^*} \left\{ \mathbb{E}_{(x,y_{\text{win}},y_{\text{lose}}) \sim \mathcal{D}} \left[ \log \sigma \left( \beta \log \frac{\pi_\theta(y_{\text{win}}|x)}{\pi_{\text{ref}}(y_{\text{win}}|x)} - \beta \log \frac{\pi_\theta(y_{\text{lose}}|x)}{\pi_{\text{ref}}(y_{\text{lose}}|x)} \right) \right] \right\}
 $$
 
-这非常的amazing啊我们竟然可以通过这个trick将两阶段的train简化成一阶段，同时还不用优化了sampling的操作让损失可以直接backprop
+这非常的amazing啊!我们竟然可以通过这个trick将两阶段的train简化成一阶段，同时还不用优化了sampling的操作让损失可以直接backprop
+
+## 实际应用
+
+- 可以用于大语言模型的微调和对齐
+
+- 在实践中比传统RLHF方法更容易实现和部署
+
+- 已经在多个开源项目中得到应用和验证
 
 ## 结论
 
