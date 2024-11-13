@@ -74,5 +74,4 @@ docker compose up -d
 更多信息请参阅 [贡献指南](https://arch.icekylin.online/postscript/contribute)。
 
 ## Star 历史
-
-[![Star History](https://starchart.cc/86kkd/86kkd.blog.svg)](https://starchart.cc/86kkd/86kkd.blog)
+[![Stargazers over time](https://starchart.cc/86kkd/86kkd.blog.svg?variant=adaptive)](https://starchart.cc/86kkd/86kkd.blog)
