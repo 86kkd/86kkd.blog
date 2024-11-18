@@ -1,14 +1,13 @@
 import type { DefaultTheme } from "vitepress";
 import algolia from "./algolia";
 import nav from "./nav";
-import sidebar from "./sidebar";
 import { LOGO as logo, REPO } from "./info";
+import sidebar from "./sidebar";  // 导入新的自动生成的侧边栏配置
 
 const themeConfig: DefaultTheme.Config = {
   algolia,
   editLink: {
-    pattern:
-      `${REPO}/edit/main/docs/:path`,
+    pattern: `${REPO}/edit/main/docs/:path`,
     text: "在 GitHub 上编辑此页"
   },
   footer: {
@@ -20,7 +19,7 @@ const themeConfig: DefaultTheme.Config = {
   lastUpdatedText: "📑 最后更新",
   logo,
   nav,
-  sidebar,
+  sidebar,  // 使用自动生成的侧边栏
   siteTitle: false,
   socialLinks: [
     { icon: "github", link: REPO }
