@@ -12,7 +12,7 @@ export default defineConfig({
   lang,
   lastUpdated: true,
   markdown: {
-    ...markdown // 合并自定义的 markdown 配置
+    ...markdown //  并自定义的 markdown 配置
   },
   themeConfig,
   title
