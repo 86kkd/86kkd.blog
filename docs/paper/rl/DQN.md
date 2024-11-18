@@ -28,11 +28,14 @@ $$
 验证和为1:
 
 $$
-\sum_{a} π(a|s) = \underbrace{(1-ε) + \frac{ε}{|A|}}_{\text{最优动作概率}} + \underbrace{(|A|-1)\frac{ε}{|A|}}_{\text{其他动作概率总和}} \\
-\sum_{a} π(a|s) = (1-ε) + \frac{ε}{|A|} + (|A|-1)\frac{ε}{|A|}  \\
-= 1-ε + \frac{ε}{|A|} + \frac{ε|A|-ε}{|A|} = 1-ε + ε = 1
+\begin{aligned}
+\sum_{a} \pi(a|s) 
+&= \underbrace{(1-\epsilon) + \frac{\epsilon}{|A|}}_{\text{最优动作概率}} + \underbrace{(|A|-1)\frac{\epsilon}{|A|}}_{\text{其他动作概率总和}} \\
+\sum_{a} \pi(a|s) 
+&= (1-\epsilon) + \frac{\epsilon}{|A|} + (|A|-1)\frac{\epsilon}{|A|} \\
+&= 1-\epsilon + \frac{\epsilon}{|A|} + \frac{\epsilon|A|-\epsilon}{|A|} = 1-\epsilon + \epsilon = 1
+\end{aligned}
 $$
-
 其中：
 
 - $\pi(a|s)$是在状态s下选择动作a的概率
