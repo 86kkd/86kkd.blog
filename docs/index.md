@@ -20,7 +20,7 @@ features:
   - icon: 📖
     title: 论文随笔
     details: VitePress 驱动，格式优化
-    link: ./paper/DirectPerferenceOptimization.md
+    link: ./paper/index.md
   - icon: 📚
     title: 个人项目
     details: 细节和原理进行了详细的说明，知其然知其所以然
