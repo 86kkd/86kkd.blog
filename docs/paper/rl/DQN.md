@@ -1,6 +1,7 @@
 # Deep Q-Learning Network(DQN)
 
 ## 什么是Q-Learning
+The Q comes from “the Quality” of that action at that state.
 Q-Learning是一种离策略(off-policy)的基于价值(value-based)的方法,
 它使用时序差分(TD, Temporal Difference)方法来训练其动作价值函数。
 
@@ -68,3 +69,26 @@ $$
 其中：
 - α：学习率
 - γ：折扣因子
+
+## From Q-Learning to Deep Q-Learning
+
+问题在于Q-Learning是一个基于表格的方法。当状态和动作空间太大而无法用数组和表格有效表示时，
+这就成为了一个问题。换句话说：它不具有可规模化的能力。
+Q-Learning只在状态空间较小的环境中表现良好，比如：
+
+- FrozenLake, we had 16 states.
+- Taxi-v3, we had 500 states.
+
+Atari 游戏环境的观察空间形状为 (210, 160, 3)*，
+其中包含的值范围从 0 到 255，这给我们带来了 256^(210×160×3) = 256^100800 
+种可能的观察结果（相比之下，在可观测宇宙中大约有 10^80 个原子）。
+
+Therefore, the state space is gigantic; due to this, 
+creating and updating a Q-table for that environment would not be efficient. 
+In this case, the best idea is to approximate the Q-values using a parametrized Q-function Qθ(s,a)Qθ​(s,a) .
+
+This neural network will approximate, given a state, 
+the different Q-values for each possible action at that state. 
+And that’s exactly what Deep Q-Learning does.
+
+![image](./DQN-Ql.jpg)
