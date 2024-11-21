@@ -92,3 +92,29 @@ the different Q-values for each possible action at that state.
 And that’s exactly what Deep Q-Learning does.
 
 ![image](./DQN-Ql.jpg)
+
+
+## The Deep Q-Learning Algorithm
+
+We learned that Deep Q-Learning uses a deep neural network to approximate the different Q-values for each possible action at a state (value-function estimation).
+
+The difference is that, during the training phase, instead of updating the Q-value of a state-action pair directly as we have done with Q-Learning:
+
+$$
+Q(S_t, A_t) \leftarrow Q(S_t, A_t) + \alpha[
+\underbrace{ \underbrace{R_{t+1} + \gamma \max_{a}Q(S_{t+1}, a)}_{\text{TD目标值}} 
+- Q(S_t, A_t)}_{\text{TD误差}}]
+$$
+
+in Deep Q-Learning, we create a loss function that compares our Q-value prediction and the Q-target and uses gradient descent to update the weights of our Deep Q-Network to approximate our Q-values better.
+
+Q-target 
+$$
+\underbrace{\underbrace{R_{t+1}}_{This\ Reward} + \ \  
+\underbrace{\gamma \max_{a}Q(S_{t+1}, a)}_{\text{Fulture\ Reward} }
+}_{TD\ Target} \\
+$$
+And this is translated into the following formula in DQN
+$$
+y_j = r_{j} + \gamma \max_{a^{\prime}}\hat{Q}(\phi_{j+1}, a^{\prime})
+$$
