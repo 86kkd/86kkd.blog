@@ -12,7 +12,12 @@ const script: HeadConfig[] = [
     {
       src: "/js/baidu.js"
     }
-  ]
+  ],
+  ['script',
+    {
+      src: '/_vercel/insights/script.js'
+    }
+  ],
 ];
 const meta: HeadConfig[] = [
   [
