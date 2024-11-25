@@ -1,4 +1,5 @@
-# 获取当前路径字符串
+# Get the current path string
+
 $paths = @(
     'C:\Windows\system32',
     'C:\Windows',
@@ -16,24 +17,34 @@ $paths = @(
     'C:\gstreamer\1.0\msvc_x86_64\bin'
 )
 
-# 去重并过滤空值
+# Remove duplicates and filter empty values
+
 $uniquePaths = $paths | Select-Object -Unique | Where-Object { $_ -and $_.Trim() }
 
-# 合并为新的路径字符串
+# Merge into a new path string
 $newPath = $uniquePaths -join ';'
 
-# 设置新的环境变量
+# Set the new environment variable
 [Environment]::SetEnvironmentVariable('Path', $newPath, 'Machine')
 
-# 显示更新后的环境变量（格式化输出）
+# get the current path string
+
+$currentPath = [Environment]::GetEnvironmentVariable('Path', 'Machine') -split ';'
+
+# Display the updated environment variable (formatted output)
+
 Write-Host "更新后的环境变量（按类别分组）："
+
 Write-Host "`n系统核心路径："
+
 $paths | Where-Object { $_ -like "*Windows*" } | ForEach-Object { "  $_" }
 
 Write-Host "`n程序文件路径："
+
 $paths | Where-Object { $_ -like "*Program Files*" } | ForEach-Object { "  $_" }
 
 Write-Host "`n开发工具路径："
+
 $paths | Where-Object { 
     $_ -like "*Visual Studio*" -or 
     $_ -like "*DLL*" -or 
@@ -42,6 +53,7 @@ $paths | Where-Object {
 } | ForEach-Object { "  $_" }
 
 Write-Host "`n用户应用路径："
+
 $paths | Where-Object { 
     $_ -like "*Users*" -or 
     $_ -like "*Scoop*" -or
