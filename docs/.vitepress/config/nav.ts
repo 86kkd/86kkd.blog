@@ -17,6 +17,28 @@ const navConfig: DefaultTheme.NavItem[] = [
       },
     ]
   },
+  {
+    text: "🤖 算法",
+    items: [
+      { text: "🏠 算法首页", link: "/Algorithm/" },
+      { text: "👁️ 计算机视觉", link: "/Algorithm/cv/" },
+      { text: "🎯 强化学习", link: "/Algorithm/rl/" },
+    ]
+  },
+  {
+    text: "💻 开发",
+    items: [
+      { text: "🏠 开发首页", link: "/Development/" },
+      { text: "🔍 RAG", link: "/Development/rag/" },
+      { text: "🌿 Git", link: "/Development/git/" },
+    ]
+  },
+  {
+    text: "🔧 DIY",
+    items: [
+      { text: "🛹 滑板项目", link: "/DIY/skateBoard" },
+    ]
+  },
   // {
   //   text: "🍰 写在后面",
   //   items: [

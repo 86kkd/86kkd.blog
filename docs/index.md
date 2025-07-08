@@ -17,24 +17,16 @@ hero:
       link: https://github.com/86kkd/86kkd.blog
 
 features:
-  - icon: 📖
-    title: 论文随笔
-    details: VitePress 驱动，格式优化
-    link: ./paper/index.md
-  - icon: 📚
-    title: 个人项目
-    details: 细节和原理进行了详细的说明，知其然知其所以然
+  - icon: 🤖
+    title: 算法学习
+    details: 机器学习、深度学习、强化学习等算法原理与实践
+    link: ./Algorithm/index.md
+  - icon: 💻
+    title: 开发技术
+    details: RAG、Git等开发技术的学习笔记和实践经验
+    link: ./Development/
+  - icon: 🔧
+    title: DIY项目
+    details: 个人DIY项目，细节和原理进行了详细的说明，知其然知其所以然
     link: ./DIY/skateBoard.md
-  # - icon: 🏝️
-  #   title: 图文丰富
-  #   details: 增加了更多可视化内容，生动形象
-  # - icon: ❎
-  #   title: 内容和谐
-  #   details: 删除了部分内容，如有需要请参阅原文档
-  # - icon: ✅
-  #   title: 实用至上
-  #   details: 遵循 arch 实用性原则，避免意识形态问题，对非自由软件更加包容
-  # - icon: 🌱
-  #   title: 参与贡献
-  #   details: 目前指南有许多需要改进的地方，参阅贡献章节帮助完善
 ---
